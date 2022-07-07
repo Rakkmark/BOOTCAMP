@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to forms</title>
+</head>
+
+<body>
+    <script>
+        const usernameField = document.querySelector("#username");
+
+        usernameField.addEventListener("input", (event) => {
+            console.log(event.target.value);
+        });
+    </script>
+    <form action="/test" method="POST">
+        <div>
+            <label for="name">Name</label>
+            <input name="name" id="name" required />
+        </div>
+        <div>
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required />
+        </div>
+        <div>
+            <label for="notes">Notes</label>
+            <textarea id="notes" rows="3" placeholder="Anything you want to tell us!"></textarea>
+        </div>
+        <div>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+</body>
+
+</html>
